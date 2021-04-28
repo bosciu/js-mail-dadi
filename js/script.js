@@ -31,6 +31,8 @@ var numeroScelto = false;
 
 var numeroSceltoPc = false;
 
+var gameOver = false;
+
 
 function VerificaEmail() {
     userEmail = emailInput.value;
@@ -109,11 +111,14 @@ function GiocoDadiPc() {
             dicePcOutput.innerHTML = "E' uscito il numero " + pcNumber + "!";
         }
     }
-    if (numeroScelto == true && numeroSceltoPc == true) {
+    if (numeroScelto == true && numeroSceltoPc == true && gameOver == false) {
         if (userNumb > pcNumber) {
-            console.log("Utente ha vinto");
+            dicePcOutput.innerHTML += "<div class='color-red'>Complimenti, hai vinto!</div>";
+        } else if (userNumb == pcNumber) {
+            dicePcOutput.innerHTML += "<br> Pareggio!";
         } else {
-            log("Pc ha vinto");
+            dicePcOutput.innerHTML += "<br> Purtroppo hai perso."
         }
+        gameOver = true;
     }
 }
