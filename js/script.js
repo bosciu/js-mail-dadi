@@ -18,7 +18,7 @@ var userEmail = prompt("Inserisci la tua email");
 
 for (var i = 0; i < emailList.length; i++) {
     if (userEmail == emailList[i]) {
-        i = 999;
+        i = emailList.length + 1;
         userConfirm = true;
     }
 }
