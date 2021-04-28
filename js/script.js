@@ -16,7 +16,13 @@ var emailInput = document.getElementById("email-input");
 
 var verifyMessage = document.getElementById("root");
 
-var userConfirm = false
+var dice = document.getElementById("dice");
+
+var diceOutput = document.getElementById("root-2");
+
+var userConfirm = false;
+
+var numeroScelto = false;
 
 
 function VerificaEmail() {
@@ -32,5 +38,36 @@ function VerificaEmail() {
         verifyMessage.innerHTML = "Sei dentro!"
     } else {
         verifyMessage.innerHTML = "Sei fuori!";
+    }
+}
+
+function Prova() {
+    var x = Math.floor(((Math.random() * 6)) + 1);
+    if (numeroScelto == false) {
+        if (x == 1) {
+            dice.className = "fas fa-dice-one fa-7x";
+            numeroScelto = true;
+            diceOutput.innerHTML = "E' uscito il numero " + x + "!";
+        } else if (x == 2) {
+            dice.className = "fas fa-dice-two fa-7x";
+            numeroScelto = true;
+            diceOutput.innerHTML = "E' uscito il numero " + x + "!";
+        } else if (x == 3) {
+            dice.className = "fas fa-dice-three fa-7x";
+            numeroScelto = true;
+            diceOutput.innerHTML = "E' uscito il numero " + x + "!";
+        } else if (x == 4) {
+            dice.className = "fas fa-dice-four fa-7x";
+            numeroScelto = true;
+            diceOutput.innerHTML = "E' uscito il numero " + x + "!";
+        } else if (x == 5) {
+            dice.className = "fas fa-dice-five fa-7x";
+            numeroScelto = true;
+            diceOutput.innerHTML = "E' uscito il numero " + x + "!";
+        } else if (x == 6) {
+            dice.className = "fas fa-dice-six fa-7x";
+            numeroScelto = true;
+            diceOutput.innerHTML = "E' uscito il numero " + x + "!";
+        }
     }
 }

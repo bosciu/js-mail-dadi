@@ -17,3 +17,8 @@ body {
 #root {
     margin: 1% 0;
 }
+
+#second-exercise>i {
+    margin: 1% 0;
+    cursor: pointer;
+}
