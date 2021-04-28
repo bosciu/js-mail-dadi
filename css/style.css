@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 20px;
+}
+
+#email-input {
+    display: block;
+    width: 35%;
+    margin: 1% auto;
+}
+
+#root {
+    margin: 1% 0;
+}

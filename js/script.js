@@ -12,19 +12,25 @@ Che ci sia un array da qualche parte?
 Se dobbiamo confrontare qualcosa che "cosa" ci serve? */
 var emailList = ["riccardo@gmail.com", "gianni@gmail.com", "franco@gmail.com", "mario@gmail.com", "bosciu@icloud.com"];
 
+var emailInput = document.getElementById("email-input");
+
+var verifyMessage = document.getElementById("root");
+
 var userConfirm = false
 
-var userEmail = prompt("Inserisci la tua email");
 
-for (var i = 0; i < emailList.length; i++) {
-    if (userEmail == emailList[i]) {
-        i = emailList.length + 1;
-        userConfirm = true;
+function VerificaEmail() {
+    userEmail = emailInput.value;
+    for (var i = 0; i < emailList.length; i++) {
+        if (userEmail == emailList[i]) {
+            i = emailList.length + 1;
+            userConfirm = true;
+        }
     }
-}
 
-if (userConfirm == true) {
-    console.log("Puoi accedere");
-} else {
-    console.log("acccesso vietato");
+    if (userConfirm == true) {
+        verifyMessage.innerHTML = "Sei dentro!"
+    } else {
+        verifyMessage.innerHTML = "Sei fuori!";
+    }
 }
