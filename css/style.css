@@ -12,6 +12,14 @@ body {
     color: red;
 }
 
+.color-green {
+    color: green;
+}
+
+.color-yellow {
+    color: blue;
+}
+
 #email-input {
     display: block;
     width: 35%;

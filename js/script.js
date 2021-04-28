@@ -50,6 +50,7 @@ function VerificaEmail() {
     }
 }
 
+
 function GiocoDadiUser() {
     userNumb = Math.floor(((Math.random() * 6)) + 1);
     if (numeroScelto == false) {
@@ -83,6 +84,9 @@ function GiocoDadiUser() {
 }
 
 function GiocoDadiPc() {
+    if (gameOver == true) {
+        window.location.reload();
+    }
     var pcNumber = Math.floor(((Math.random() * 6)) + 1);
     if (numeroSceltoPc == false) {
         if (pcNumber == 1) {
@@ -113,12 +117,13 @@ function GiocoDadiPc() {
     }
     if (numeroScelto == true && numeroSceltoPc == true && gameOver == false) {
         if (userNumb > pcNumber) {
-            dicePcOutput.innerHTML += "<div class='color-red'>Complimenti, hai vinto!</div>";
+            dicePcOutput.innerHTML += "<div class='color-green'>Complimenti, hai vinto!</div>";
         } else if (userNumb == pcNumber) {
-            dicePcOutput.innerHTML += "<br> Pareggio!";
+            dicePcOutput.innerHTML += "<div class='color-yellow'>Pareggio!</div>";
         } else {
-            dicePcOutput.innerHTML += "<br> Purtroppo hai perso."
+            dicePcOutput.innerHTML += "<div class='color-red'>Purtroppo hai perso.</div>";
         }
         gameOver = true;
+        document.getElementById("sfida-computer").value = "Ricomincia!";
     }
 }
