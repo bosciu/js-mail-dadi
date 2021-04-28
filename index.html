@@ -22,9 +22,14 @@
     <hr>
     <section id="second-exercise" class="container text-center">
         <h1>Esercizio 2</h1>
-        <h3>Clicca sui Dadi per far uscire un numero!</h3>
-        <i id="dice" class="fas fa-dice fa-7x" onclick=Prova()></i>
+        <h3>Clicca <span class="color-red"><u>sui Dadi</u></span> per far uscire un numero!</h3>
+        <i id="dice-user" class="fas fa-dice fa-7x" onclick=GiocoDadiUser()></i>
         <h2 id="root-2"></h2>
+        <div id="invisible">
+            <button class="btn btn-primary" onclick=GiocoDadiPc()>Sfida il Computer!</button>
+            <i id="dice-pc" class="fas fa-dice fa-7x"></i>
+            <h2 id="root-3"></h2>
+        </div>
     </section>
 
 

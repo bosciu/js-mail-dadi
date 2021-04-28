@@ -8,6 +8,10 @@ body {
     padding-top: 20px;
 }
 
+.color-red {
+    color: red;
+}
+
 #email-input {
     display: block;
     width: 35%;
@@ -18,7 +22,16 @@ body {
     margin: 1% 0;
 }
 
-#second-exercise>i {
+#second-exercise i {
+    display: block;
     margin: 1% 0;
     cursor: pointer;
+}
+
+#invisible {
+    visibility: hidden;
+}
+
+#invisible>button {
+    margin: 1% 0;
 }

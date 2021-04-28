@@ -16,13 +16,20 @@ var emailInput = document.getElementById("email-input");
 
 var verifyMessage = document.getElementById("root");
 
-var dice = document.getElementById("dice");
 
-var diceOutput = document.getElementById("root-2");
+var diceUser = document.getElementById("dice-user");
+
+var diceUserOutput = document.getElementById("root-2");
+
+var dicePc = document.getElementById("dice-pc");
+
+var dicePcOutput = document.getElementById("root-3");
 
 var userConfirm = false;
 
 var numeroScelto = false;
+
+var numeroSceltoPc = false;
 
 
 function VerificaEmail() {
@@ -41,33 +48,72 @@ function VerificaEmail() {
     }
 }
 
-function Prova() {
-    var x = Math.floor(((Math.random() * 6)) + 1);
+function GiocoDadiUser() {
+    userNumb = Math.floor(((Math.random() * 6)) + 1);
     if (numeroScelto == false) {
-        if (x == 1) {
-            dice.className = "fas fa-dice-one fa-7x";
+        if (userNumb == 1) {
+            diceUser.className = "fas fa-dice-one fa-7x";
             numeroScelto = true;
-            diceOutput.innerHTML = "E' uscito il numero " + x + "!";
-        } else if (x == 2) {
-            dice.className = "fas fa-dice-two fa-7x";
+            diceUserOutput.innerHTML = "E' uscito il numero " + userNumb + "!";
+        } else if (userNumb == 2) {
+            diceUser.className = "fas fa-dice-two fa-7x";
             numeroScelto = true;
-            diceOutput.innerHTML = "E' uscito il numero " + x + "!";
-        } else if (x == 3) {
-            dice.className = "fas fa-dice-three fa-7x";
+            diceUserOutput.innerHTML = "E' uscito il numero " + userNumb + "!";
+        } else if (userNumb == 3) {
+            diceUser.className = "fas fa-dice-three fa-7x";
             numeroScelto = true;
-            diceOutput.innerHTML = "E' uscito il numero " + x + "!";
-        } else if (x == 4) {
-            dice.className = "fas fa-dice-four fa-7x";
+            diceUserOutput.innerHTML = "E' uscito il numero " + userNumb + "!";
+        } else if (userNumb == 4) {
+            diceUser.className = "fas fa-dice-four fa-7x";
             numeroScelto = true;
-            diceOutput.innerHTML = "E' uscito il numero " + x + "!";
-        } else if (x == 5) {
-            dice.className = "fas fa-dice-five fa-7x";
+            diceUserOutput.innerHTML = "E' uscito il numero " + userNumb + "!";
+        } else if (userNumb == 5) {
+            diceUser.className = "fas fa-dice-five fa-7x";
             numeroScelto = true;
-            diceOutput.innerHTML = "E' uscito il numero " + x + "!";
-        } else if (x == 6) {
-            dice.className = "fas fa-dice-six fa-7x";
+            diceUserOutput.innerHTML = "E' uscito il numero " + userNumb + "!";
+        } else if (userNumb == 6) {
+            diceUser.className = "fas fa-dice-six fa-7x";
             numeroScelto = true;
-            diceOutput.innerHTML = "E' uscito il numero " + x + "!";
+            diceUserOutput.innerHTML = "E' uscito il numero " + userNumb + "!";
+        }
+        document.getElementById("invisible").style.visibility = "visible"
+    }
+}
+
+function GiocoDadiPc() {
+    var pcNumber = Math.floor(((Math.random() * 6)) + 1);
+    if (numeroSceltoPc == false) {
+        if (pcNumber == 1) {
+            dicePc.className = "fas fa-dice-one fa-7x";
+            numeroSceltoPc = true;
+            dicePcOutput.innerHTML = "E' uscito il numero " + pcNumber + "!";
+        } else if (pcNumber == 2) {
+            dicePc.className = "fas fa-dice-two fa-7x";
+            numeroSceltoPc = true;
+            dicePcOutput.innerHTML = "E' uscito il numero " + pcNumber + "!";
+        } else if (pcNumber == 3) {
+            dicePc.className = "fas fa-dice-three fa-7x";
+            numeroSceltoPc = true;
+            dicePcOutput.innerHTML = "E' uscito il numero " + pcNumber + "!";
+        } else if (pcNumber == 4) {
+            dicePc.className = "fas fa-dice-four fa-7x";
+            numeroSceltoPc = true;
+            dicePcOutput.innerHTML = "E' uscito il numero " + pcNumber + "!";
+        } else if (pcNumber == 5) {
+            dicePc.className = "fas fa-dice-five fa-7x";
+            numeroSceltoPc = true;
+            dicePcOutput.innerHTML = "E' uscito il numero " + pcNumber + "!";
+        } else if (pcNumber == 6) {
+            dicePc.className = "fas fa-dice-six fa-7x";
+            numeroSceltoPc = true;
+            dicePcOutput.innerHTML = "E' uscito il numero " + pcNumber + "!";
+        }
+    }
+    if (numeroScelto == true && numeroSceltoPc == true) {
+        if (userNumb > pcNumber) {
+            console.log("Utente ha vinto");
+        } else {
+            log("Pc ha vinto");
         }
     }
 }
